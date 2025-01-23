@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+		integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<title>Login</title>
+
+	<style>
+		/* General Styles */
+		body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+		.login-container {
+			width: 350px;
+			padding: 30px 25px;
+			background: #ffffff;
+			border-radius: 15px;
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+			text-align: center;
+			position: relative;
+		}
+
+		.login-container::before {
+			content: '';
+			position: absolute;
+			top: -10px;
+			left: -10px;
+			right: -10px;
+			bottom: -10px;
+			z-index: -1;
+			background: linear-gradient(135deg, #ffde59, #ff6b6b);
+			border-radius: 20px;
+			filter: blur(20px);
+		}
+
+		.login-container h1 {
+			font-size: 2rem;
+			font-weight: 600;
+			margin-bottom: 20px;
+			color: #6a11cb;
+		}
+
+		.login-container p {
+			font-size: 0.9rem;
+			color: #666;
+			margin-bottom: 25px;
+		}
+
+		.login-container form {
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+		}
+
+		.login-container form input {
+			width: 100%;
+			padding: 12px 15px;
+			font-size: 1rem;
+			border: 1px solid #ddd;
+			border-radius: 8px;
+			background: #f9f9f9;
+			transition: box-shadow 0.3s ease;
+		}
+
+		.login-container form input:focus {
+			outline: none;
+			box-shadow: 0 0 8px rgba(106, 17, 203, 0.3);
+			border-color: #6a11cb;
+		}
+
+		.login-container form button {
+			padding: 12px;
+			font-size: 1rem;
+			font-weight: 600;
+			background: linear-gradient(135deg, #6a11cb, #2575fc);
+			color: #fff;
+			border: none;
+			border-radius: 8px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+
+		.login-container form button:hover {
+			background: linear-gradient(135deg, #2575fc, #6a11cb);
+			transform: translateY(-2px);
+			box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+		}
+
+		.login-container .register {
+			margin-top: 15px;
+			font-size: 0.9rem;
+			color: #555;
+		}
+
+		.login-container .register a {
+			color: #6a11cb;
+			font-weight: 600;
+			text-decoration: none;
+			transition: color 0.3s ease;
+		}
+
+		.login-container .register a:hover {
+			color: #2575fc;
+		}
+
+		/* General Styles */
+
+
+footer {
+    width: 100%;
+    background-color: #000;
+    margin-top: auto;  /* Ensures footer stays at the bottom */
+}
+
+.footerContainer {
+    width: 100%;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a {
+        text-decoration: none;
+        padding: 4px;
+        background-color: white;
+        border-radius: 50%;
+        margin: 7px;
+}
+
+.socialIcons a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialIcons a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+    color: white;
+    transition: 0.5s;
+}
+
+.footerBottom {
+    background-color: #000;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: white;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+	</style>
+</head>
+
+<body>
+	<div class="login-container">
+		<h1>Welcome Back</h1>
+		<p>Login to continue to your account</p>
+		<form method="post" action="/login">
+			<input type="text" name="username" placeholder="Enter your username" required>
+			<input type="password" name="password" placeholder="Enter your password" required>
+			<button type="submit">Login</button>
+		</form>
+		<div class="register">
+			<p>Don't have an account? <a href="/register">Sign Up</a></p>
+		</div>
+	</div>
+	<footer>
+
+		<div class="footerContainer">
+			<div class="socialIcons">
+				<a href="tel:#"><i class="fa-solid fa-phone"></i></a>
+				<a href="mailto:manishrealme4@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+				<a href="https://www.linkedin.com/in/manish-anand-902b0a250/"><i class="fa-brands fa-linkedin"></i></a>
+				<a href="https://github.com/manishanandcom"><i class="fa-brands fa-github"></i></a>
+				<a href="#"><i class="fa-brands fa-instagram"></i></a>
+			</div>
+		</div>
+
+		<div class="footerBottom">
+			<p>Thanks for visiting! Feel free to connect with me.</p>
+			<p>Designer |<span class="designer">Manish Anand</span></p>
+			<p>Copyright &copy;2025;</p>
+		</div>
+
+		<a href="#top" id="backToTopButton" title="Go to top">&#8679; Top</a>
+
+	</footer>
+</body>
+
+</html>
